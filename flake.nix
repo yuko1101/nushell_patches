@@ -22,6 +22,31 @@
         pkgs = import nixpkgs {
           inherit system;
         };
+
+        src = inputs.git-patcher.lib.applyPatches {
+          inherit upstream pkgs;
+          src = self;
+        };
+        cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
+          inherit src;
+          hash = "sha256-dZ5tnRgbivbrutmI8DJ/qmTd+yGW8UjkcnJddFk04s8=";
+        };
+        version = (builtins.fromTOML (builtins.readFile "${src}/Cargo.toml")).package.version;
+
+        # TODO: implement original packages instead of overriding nixpkgs
+        nushell = pkgs.nushell.overrideAttrs (oldAttrs: {
+          inherit src cargoDeps version;
+          cargoBuildFlags =
+            (oldAttrs.cargoBuildFlags or [])
+            ++ [
+              "--features"
+              "system-clipboard"
+            ];
+          doCheck = false;
+        });
+        nu_plugin_polars = pkgs.nushellPlugins.polars.overrideAttrs (oldAttrs: {
+          inherit src cargoDeps version;
+        });
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
@@ -31,9 +56,9 @@
           GIT_PATCHER_CONFIG = ./patcher.toml;
         };
 
-        packages.src = inputs.git-patcher.lib.applyPatches {
-          inherit upstream pkgs;
-          src = self;
+        packages = {
+          inherit src nushell nu_plugin_polars;
+          default = nushell;
         };
       }
     );
