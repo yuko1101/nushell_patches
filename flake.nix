@@ -9,6 +9,11 @@
       url = ./upstream;
       flake = false;
     };
+
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {
     self,
@@ -21,7 +26,9 @@
       system: let
         pkgs = import nixpkgs {
           inherit system;
+          overlays = [inputs.rust-overlay.overlays.default];
         };
+        custom-rust-bin = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
 
         src = inputs.git-patcher.lib.applyPatches {
           inherit upstream pkgs;
@@ -51,6 +58,7 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             inputs.git-patcher.packages.${system}.default
+            custom-rust-bin
           ];
 
           GIT_PATCHER_CONFIG = ./patcher.toml;
