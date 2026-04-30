@@ -36,7 +36,7 @@
         };
         cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
           inherit src;
-          hash = "sha256-dZ5tnRgbivbrutmI8DJ/qmTd+yGW8UjkcnJddFk04s8=";
+          hash = "sha256-PGqfEPiz83XrYGKtWI3Omrg7igLCRcL8qcsZcx15jiQ=";
         };
         version = (builtins.fromTOML (builtins.readFile "${src}/Cargo.toml")).package.version;
 
