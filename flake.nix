@@ -56,9 +56,14 @@
         });
       in {
         devShell = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            pkg-config
+          ];
+
           buildInputs = [
             inputs.git-patcher.packages.${system}.default
             custom-rust-bin
+            pkgs.openssl
           ];
 
           GIT_PATCHER_CONFIG = ./patcher.toml;

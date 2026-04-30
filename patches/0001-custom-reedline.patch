@@ -1,0 +1,42 @@
+From 173068b52bda3040a56cf8fb12f7744e4d5c6ec5 Mon Sep 17 00:00:00 2001
+From: yuko1101 <68993883+yuko1101@users.noreply.github.com>
+Date: Wed, 29 Apr 2026 10:54:28 +0900
+Subject: [PATCH] custom reedline
+X-Git-Patcher-Author: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777427668 +0900
+X-Git-Patcher-Committer: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777427668 +0900
+X-Git-Patcher-Commit-Message: Y3VzdG9tIHJlZWRsaW5lCg==
+X-Git-Patcher-Parent-Hash: e65670888cec0d753a79e80220b4044961520a8b
+X-Git-Patcher-Commit-Hash: 173068b52bda3040a56cf8fb12f7744e4d5c6ec5
+
+
+---
+ Cargo.lock | 2 +-
+ Cargo.toml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Cargo.lock b/Cargo.lock
+index 9718aba..9f6e3a6 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -6875,7 +6875,7 @@ dependencies = [
+ [[package]]
+ name = "reedline"
+ version = "0.47.0"
+-source = "git+https://github.com/nushell/reedline?branch=main#8b5ba014b07ba2f7dd0d51b0f88bf26c67d55790"
++source = "git+https://github.com/yuko1101/reedline_patches?branch=git-patcher%2Fsnapshot#1d45486e4040d8f1df2f11a4ffe530a3730c894f"
+ dependencies = [
+  "arboard",
+  "chrono",
+diff --git a/Cargo.toml b/Cargo.toml
+index b2624ef..87805bd 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -406,7 +406,7 @@ bench = false
+ # To use a development version of a dependency please use a global override here
+ # changing versions in each sub-crate of the workspace is tedious
+ [patch.crates-io]
+-reedline = { git = "https://github.com/nushell/reedline", branch = "main" }
++reedline = { git = "https://github.com/yuko1101/reedline_patches", branch = "git-patcher/snapshot" }
+ # nu-ansi-term = { git = "https://github.com/nushell/nu-ansi-term.git", branch = "main" }
+ 
+ # Run all benchmarks with `cargo bench`
