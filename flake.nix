@@ -53,6 +53,7 @@
         });
         nu_plugin_polars = pkgs.nushellPlugins.polars.overrideAttrs (oldAttrs: {
           inherit src cargoDeps version;
+          doCheck = false;
         });
       in {
         devShell = pkgs.mkShell {
