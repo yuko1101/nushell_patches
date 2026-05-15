@@ -1,12 +1,12 @@
-From 2250f77b3b82c6a91fba50c8d2062cd24980c4d7 Mon Sep 17 00:00:00 2001
+From bc2f957bdd87557de263dfe6b12a38f17b636799 Mon Sep 17 00:00:00 2001
 From: yuko1101 <68993883+yuko1101@users.noreply.github.com>
 Date: Thu, 30 Apr 2026 04:33:31 +0900
 Subject: [PATCH] ast command
 X-Git-Patcher-Author: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777491211 +0900
 X-Git-Patcher-Committer: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777491211 +0900
 X-Git-Patcher-Commit-Message: YXN0IGNvbW1hbmQK
-X-Git-Patcher-Parent-Hash: 173068b52bda3040a56cf8fb12f7744e4d5c6ec5
-X-Git-Patcher-Commit-Hash: 2250f77b3b82c6a91fba50c8d2062cd24980c4d7
+X-Git-Patcher-Parent-Hash: 34959aec01a798655e045e296e0ebb393bb3a7b5
+X-Git-Patcher-Commit-Hash: bc2f957bdd87557de263dfe6b12a38f17b636799
 
 
 ---
@@ -375,10 +375,10 @@ index be68c8c..2432a4d 100644
  pub use env::DebugEnv;
  pub use experimental_options::DebugExperimentalOptions;
 diff --git a/crates/nu-command/src/default_context.rs b/crates/nu-command/src/default_context.rs
-index 0ea00c1..766b7b9 100644
+index bf6a09b..6d3edfa 100644
 --- a/crates/nu-command/src/default_context.rs
 +++ b/crates/nu-command/src/default_context.rs
-@@ -153,6 +153,7 @@ pub fn add_shell_command_context(mut engine_state: EngineState) -> EngineState {
+@@ -154,6 +154,7 @@ pub fn add_shell_command_context(mut engine_state: EngineState) -> EngineState {
          // Debug
          bind_command! {
              Ast,

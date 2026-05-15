@@ -1,12 +1,12 @@
-From adad9f95a4ab4714e21f80fb5cc0c0bb40e515e1 Mon Sep 17 00:00:00 2001
+From b1060ce063dc04dde36b92feba9359a2688437d1 Mon Sep 17 00:00:00 2001
 From: yuko1101 <68993883+yuko1101@users.noreply.github.com>
 Date: Thu, 30 Apr 2026 13:57:58 +0900
 Subject: [PATCH] default experimental options
 X-Git-Patcher-Author: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777525078 +0900
 X-Git-Patcher-Committer: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777525078 +0900
 X-Git-Patcher-Commit-Message: ZGVmYXVsdCBleHBlcmltZW50YWwgb3B0aW9ucwo=
-X-Git-Patcher-Parent-Hash: 2250f77b3b82c6a91fba50c8d2062cd24980c4d7
-X-Git-Patcher-Commit-Hash: adad9f95a4ab4714e21f80fb5cc0c0bb40e515e1
+X-Git-Patcher-Parent-Hash: bc2f957bdd87557de263dfe6b12a38f17b636799
+X-Git-Patcher-Commit-Hash: b1060ce063dc04dde36b92feba9359a2688437d1
 
 
 ---

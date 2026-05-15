@@ -1,12 +1,12 @@
-From 173068b52bda3040a56cf8fb12f7744e4d5c6ec5 Mon Sep 17 00:00:00 2001
+From 34959aec01a798655e045e296e0ebb393bb3a7b5 Mon Sep 17 00:00:00 2001
 From: yuko1101 <68993883+yuko1101@users.noreply.github.com>
 Date: Wed, 29 Apr 2026 10:54:28 +0900
 Subject: [PATCH] custom reedline
 X-Git-Patcher-Author: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777427668 +0900
 X-Git-Patcher-Committer: yuko1101 <68993883+yuko1101@users.noreply.github.com> 1777427668 +0900
 X-Git-Patcher-Commit-Message: Y3VzdG9tIHJlZWRsaW5lCg==
-X-Git-Patcher-Parent-Hash: e65670888cec0d753a79e80220b4044961520a8b
-X-Git-Patcher-Commit-Hash: 173068b52bda3040a56cf8fb12f7744e4d5c6ec5
+X-Git-Patcher-Parent-Hash: cb757c110acf13061551a8bc2377b3e5f3fc9667
+X-Git-Patcher-Commit-Hash: 34959aec01a798655e045e296e0ebb393bb3a7b5
 
 
 ---
@@ -15,10 +15,10 @@ X-Git-Patcher-Commit-Hash: 173068b52bda3040a56cf8fb12f7744e4d5c6ec5
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/Cargo.lock b/Cargo.lock
-index 9718aba..9f6e3a6 100644
+index 3111a74..a7a30d6 100644
 --- a/Cargo.lock
 +++ b/Cargo.lock
-@@ -6875,7 +6875,7 @@ dependencies = [
+@@ -7185,7 +7185,7 @@ dependencies = [
  [[package]]
  name = "reedline"
  version = "0.47.0"
@@ -28,10 +28,10 @@ index 9718aba..9f6e3a6 100644
   "arboard",
   "chrono",
 diff --git a/Cargo.toml b/Cargo.toml
-index b2624ef..87805bd 100644
+index faa3235..18b1be9 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -406,7 +406,7 @@ bench = false
+@@ -415,7 +415,7 @@ bench = false
  # To use a development version of a dependency please use a global override here
  # changing versions in each sub-crate of the workspace is tedious
  [patch.crates-io]
